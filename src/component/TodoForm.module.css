@@ -1,0 +1,10 @@
+.input {
+  text-align: center;
+  border: none;
+  outline: none;
+  width: 60%;
+  font-size: 20px;
+  background-color: #f4f4f4;
+  padding: 15px;
+  padding-left: 40px;
+}
