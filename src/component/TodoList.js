@@ -15,15 +15,42 @@ const TodoList = () => {
   };
 
   const deleteHandler = (id) => {
-    const todosUpdate = todos.filter((t) => t.id !== id);
-    setTodos(todosUpdate);
+    const todosUpdated = todos.filter((t) => t.id !== id);
+
+    setTodos(todosUpdated);
+  };
+
+  const editHandler = (todoId, newValue) => {
+    if (!newValue.text) {
+      return;
+    }
+    setTodos((prev) =>
+      prev.map((item) => (item.id === todoId ? newValue : item))
+    );
+  };
+
+  const completeTodo = (id) => {
+    const updateTodo = todos.map((todo) => {
+      if (todo.id === id) {
+        todo.isComplete = !todo.isComplete;
+      }
+      return todo;
+    });
+    setTodos(updateTodo);
   };
 
   return (
     <div className={classes.center}>
       <h1>To do List</h1>
       <TodoForm onSubmit={addTodo} />
-      <Todo todos={todos} deleteHandler={deleteHandler} />
+      <div>
+        <Todo
+          todos={todos}
+          deleteHandler={deleteHandler}
+          editHandler={editHandler}
+          completeTodo={completeTodo}
+        />
+      </div>
     </div>
   );
 };

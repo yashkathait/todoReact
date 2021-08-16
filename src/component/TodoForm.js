@@ -2,7 +2,7 @@ import { useState } from "react";
 import classes from "./TodoForm.module.css";
 
 const TodoForm = (props) => {
-  const [input, setInput] = useState("");
+  const [input, setInput] = useState(props.edit ? props.edit.text : "");
 
   const handleChange = (event) => {
     setInput(event.target.value);
