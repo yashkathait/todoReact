@@ -1,0 +1,22 @@
+.todorow {
+  text-align: left;
+  padding-left: 10px;
+}
+.para {
+  position: relative;
+  margin: 10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.icons {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+}
+.deleteicon {
+  margin: 0 5px;
+  font-size: 25px;
+}
+.editicon {
+  margin: 0 5px;
+  font-size: 25px;
+}

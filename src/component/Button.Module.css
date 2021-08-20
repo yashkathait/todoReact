@@ -1,0 +1,15 @@
+.button {
+  width: 55px;
+  height: 55px;
+  border: none;
+  font-size: 50px;
+  background-color: inherit;
+  outline: none;
+  position: absolute;
+  border-radius: 50%;
+  align-items: center;
+  transition: 0.4s ease-in-out;
+}
+.button:hover {
+  transform: rotate(180deg);
+}

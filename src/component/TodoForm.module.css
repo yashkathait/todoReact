@@ -1,10 +1,32 @@
+.todoform {
+  margin-bottom: 15px;
+}
+
 .input {
   text-align: center;
   border: none;
   outline: none;
-  width: 60%;
+  width: 40%;
   font-size: 20px;
   background-color: #f4f4f4;
   padding: 15px;
-  padding-left: 40px;
+  padding-left: 20px;
+  padding-right: 0;
+}
+.input::placeholder {
+  color: rgb(187, 181, 181);
+}
+.inputedit {
+  text-align: center;
+  border: none;
+  outline: none;
+  width: 40%;
+  font-size: 20px;
+  background-color: #f4f4f4;
+  padding: 15px;
+  padding-left: 20px;
+  padding-right: 0;
+}
+.inputedit::placeholder {
+  color: rgb(160, 160, 160);
 }

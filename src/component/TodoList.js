@@ -29,26 +29,15 @@ const TodoList = () => {
     );
   };
 
-  const completeTodo = (id) => {
-    const updateTodo = todos.map((todo) => {
-      if (todo.id === id) {
-        todo.isComplete = !todo.isComplete;
-      }
-      return todo;
-    });
-    setTodos(updateTodo);
-  };
-
   return (
     <div className={classes.center}>
-      <h1>To do List</h1>
+      <h1 className={classes.heading}>To do List</h1>
       <TodoForm onSubmit={addTodo} />
       <div>
         <Todo
           todos={todos}
           deleteHandler={deleteHandler}
           editHandler={editHandler}
-          completeTodo={completeTodo}
         />
       </div>
     </div>
