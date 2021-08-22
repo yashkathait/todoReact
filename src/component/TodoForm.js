@@ -1,9 +1,12 @@
 import { useState, useRef, useEffect } from "react";
+import { addTodo } from "../store/action";
+import { useDispatch } from "react-redux";
 import classes from "./TodoForm.module.css";
 import Button from "./Button";
 
 const TodoForm = (props) => {
-  const [input, setInput] = useState(props.edit ? props.edit.text : "");
+  const [input, setInput] = useState("");
+  const dispatch = useDispatch();
 
   const inputRef = useRef(null);
 
@@ -17,10 +20,7 @@ const TodoForm = (props) => {
 
   const submitHandler = (event) => {
     event.preventDefault();
-    props.onSubmit({
-      id: Math.random().toString(),
-      text: input,
-    });
+
     setInput("");
   };
 
@@ -30,26 +30,16 @@ const TodoForm = (props) => {
       className={classes.todoform}
       autoComplete="off"
     >
-      {props.edit ? (
-        <input
-          className={classes.inputedit}
-          placeholder="Edit Todo"
-          value={input}
-          onChange={handleChange}
-          name="text"
-          ref={inputRef}
-        ></input>
-      ) : (
-        <input
-          className={classes.input}
-          placeholder="Add Todo"
-          value={input}
-          onChange={handleChange}
-          name="text"
-          ref={inputRef}
-        ></input>
-      )}
-      {!props.edit ? <Button>+</Button> : <div></div>}
+      <input
+        className={classes.input}
+        placeholder="Add Todo"
+        value={input}
+        onChange={handleChange}
+        name="text"
+        ref={inputRef}
+      ></input>
+
+      <Button onClick={() => dispatch(addTodo(input))}>+</Button>
     </form>
   );
 };
