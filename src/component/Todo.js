@@ -7,9 +7,9 @@ import classes from "./Todo.Module.css";
 const Todo = () => {
   const list = useSelector((state) => state.todoReducer.list);
   const dispatch = useDispatch();
-  return list.map((elem, index) => (
-    <div key={index} className={classes.todorow}>
-      <div key={elem.id}>
+  return list.map((elem) => (
+    <div key={elem.id} className={classes.todorow}>
+      <div>
         <p className={classes.para}>
           {elem.data}
           <span className={classes.icons}>

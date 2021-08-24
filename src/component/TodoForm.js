@@ -4,7 +4,7 @@ import { useDispatch } from "react-redux";
 import classes from "./TodoForm.module.css";
 import Button from "./Button";
 
-const TodoForm = (props) => {
+const TodoForm = () => {
   const [input, setInput] = useState("");
   const dispatch = useDispatch();
 

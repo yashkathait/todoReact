@@ -7,8 +7,9 @@ export const addTodo = (data) => {
     },
   };
 };
-export const removeTodo = (data) => {
+export const removeTodo = (id) => {
   return {
     type: "REMOVE_TODO",
+    id,
   };
 };
