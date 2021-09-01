@@ -6,24 +6,13 @@
   text-align: center;
   border: none;
   outline: none;
-  width: 40%;
+  width: 50%;
   font-size: 20px;
   background-color: #f4f4f4;
   padding: 15px;
-  padding-left: 20px;
+
   padding-right: 0;
 }
 .input::placeholder {
   color: rgb(187, 181, 181);
-}
-.inputedit {
-  text-align: center;
-  border: none;
-  outline: none;
-  width: 40%;
-  font-size: 20px;
-  background-color: #f4f4f4;
-  padding: 15px;
-  padding-left: 20px;
-  padding-right: 0;
 }
