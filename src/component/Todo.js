@@ -14,10 +14,10 @@ const Todo = () => {
 
   return list.map((elem) => (
     <div key={elem.id} className={classes.todorow}>
-      <div>
-        {isediting ? (
-          <EditForm elem={elem} setIsEditing={setIsEditing}></EditForm>
-        ) : (
+      {isediting ? (
+        <EditForm elem={elem} setIsEditing={setIsEditing}></EditForm>
+      ) : (
+        <div>
           <p className={classes.para}>
             {elem.data}
             <span className={classes.icons}>
@@ -31,8 +31,8 @@ const Todo = () => {
               />
             </span>
           </p>
-        )}
-      </div>
+        </div>
+      )}
     </div>
   ));
 };
